@@ -39,8 +39,32 @@ INSERT INTO clinical_reference_ranges (config_key) VALUES ('DEFAULT')
 ON DUPLICATE KEY UPDATE config_key = 'DEFAULT';
 
 -- Password hash below corresponds to "OhsExpert2026!"
-INSERT INTO users (user_code, full_name, email, password_hash, role, department_name) VALUES
-('USR-001', 'Dr. Nadia Kusuma', 'admin@ohsexpert.io', '$2b$10$wX5tL7M8Q1x1a5Y7V8v9eO0Q9jH5qR2T3wX4yZ5a6b7c8d9e0f1g2', 'ADMIN', 'Corporate HSE'),
-('USR-002', 'Rendra Pratama', 'hse@ohsexpert.io', '$2b$10$wX5tL7M8Q1x1a5Y7V8v9eO0Q9jH5qR2T3wX4yZ5a6b7c8d9e0f1g2', 'HSE_OFFICER', 'Plant Safety'),
-('USR-003', 'Hendra Wijaya', 'management@ohsexpert.io', '$2b$10$wX5tL7M8Q1x1a5Y7V8v9eO0Q9jH5qR2T3wX4yZ5a6b7c8d9e0f1g2', 'MANAGEMENT', 'Executive Operations')
-ON DUPLICATE KEY UPDATE full_name = VALUES(full_name);
+INSERT INTO users
+(user_code, full_name, email, password_hash, role, department_name)
+VALUES
+(
+  'USR-001',
+  'Dr. Nadia Kusuma',
+  'admin@ohsexpert.io',
+  '$2b$10$jPUHhdPmSQf21kzb6llbW.o.Sye12LAXaQwDJBfeO/mfvxAUfmnHO',
+  'ADMIN',
+  'Corporate HSE'
+),
+(
+  'USR-002',
+  'Rendra Pratama',
+  'hse@ohsexpert.io',
+  '$2b$10$jPUHhdPmSQf21kzb6llbW.o.Sye12LAXaQwDJBfeO/mfvxAUfmnHO',
+  'HSE_OFFICER',
+  'Plant Safety'
+),
+(
+  'USR-003',
+  'Hendra Wijaya',
+  'management@ohsexpert.io',
+  '$2b$10$jPUHhdPmSQf21kzb6llbW.o.Sye12LAXaQwDJBfeO/mfvxAUfmnHO',
+  'MANAGEMENT',
+  'Executive Operations'
+)
+ON DUPLICATE KEY UPDATE
+full_name = VALUES(full_name);
