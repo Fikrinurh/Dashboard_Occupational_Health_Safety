@@ -1,4 +1,5 @@
 import type { ResultSetHeader, RowDataPacket } from 'mysql2/promise';
+
 import {
   calculateBmi,
   classifyBloodGlucose,
@@ -8,7 +9,8 @@ import {
   computeCapaEffectiveStatus,
   DEFAULT_CLINICAL_RANGES,
   deriveMedicalStatus,
-} from '../../src/shared/ohsLogic';
+} from '../../src/shared/ohsLogic.js';
+
 import type {
   AuditLog,
   AuthUser,
@@ -27,7 +29,8 @@ import type {
   MedicalExamination,
   VerificationRecord,
 } from '../../src/shared/types';
-import { getMysqlPool } from './mysql';
+
+import { getMysqlPool } from './mysql.js';
 import type { IncidentDetailBundle, OhsRepository, StoredUser } from './types';
 
 export class MysqlRepository implements OhsRepository {
