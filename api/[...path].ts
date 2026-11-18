@@ -1,4 +1,3 @@
-
 import express from 'express';
 import { initializeDatabaseAdapter } from '../server/db/adapter.js';
 import { apiRouter } from '../server/routes/api.js';
