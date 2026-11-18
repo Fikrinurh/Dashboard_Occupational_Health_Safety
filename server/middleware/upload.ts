@@ -2,7 +2,7 @@ import crypto from 'crypto';
 import fs from 'fs';
 import multer from 'multer';
 import path from 'path';
-import { env } from '../config/env';
+import { env } from '../config/env.js';
 
 fs.mkdirSync(env.uploadDir, { recursive: true });
 
