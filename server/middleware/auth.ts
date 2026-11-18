@@ -1,8 +1,8 @@
 import type { NextFunction, Request, Response } from 'express';
 import jwt from 'jsonwebtoken';
 import type { AuthUser, UserRole } from '../../src/shared/types';
-import { env } from '../config/env';
-import { getRepository } from '../db/adapter';
+import { env } from '../config/env.js';
+import { getRepository } from '../db/adapter.js';
 
 export interface AuthenticatedRequest extends Request {
   user?: AuthUser;
