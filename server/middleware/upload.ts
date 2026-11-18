@@ -15,9 +15,10 @@ const ALLOWED_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.pdf']);
 
 const storage = multer.diskStorage({
   destination: (_req, _file, cb) => {
-    fs.mkdirSync(env.uploadDir, { recursive: true });
-    cb(null, env.uploadDir);
-  },
+  const uploadDir = '/tmp/uploads';
+  fs.mkdirSync(uploadDir, { recursive: true });
+  cb(null, uploadDir);
+},
   filename: (_req, file, cb) => {
     const ext = path.extname(file.originalname).toLowerCase();
     const unique = `${Date.now()}-${crypto.randomBytes(8).toString('hex')}${ext}`;
