@@ -1,8 +1,5 @@
-
-import express from 'express';
 import { initializeDatabaseAdapter } from '../server/db/adapter.js';
 import { apiRouter } from '../server/routes/api.js';
-
 const app = express();
 
 app.use(express.json({ limit: '5mb' }));
