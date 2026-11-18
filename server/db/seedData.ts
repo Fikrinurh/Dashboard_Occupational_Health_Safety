@@ -7,7 +7,7 @@ import {
   classifyUricAcid,
   DEFAULT_CLINICAL_RANGES,
   deriveMedicalStatus,
-} from '../../src/shared/ohsLogic';
+} from '../../src/shared/ohsLogic.js';
 import type {
   AuditLog,
   CapaAction,
