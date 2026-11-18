@@ -11,7 +11,7 @@ import {
   classifyUricAcid,
   deriveMedicalStatus,
   evaluateIncidentClosureGate,
-} from '../../src/shared/ohsLogic';
+} from '../../src/shared/ohsLogic.js';
 import type { DashboardFilters, SectionFilter, UserRole } from '../../src/shared/types';
 import {
   capaSchema,
@@ -22,16 +22,16 @@ import {
   investigationSchema,
   loginSchema,
   medicalExamSchema,
-} from '../../src/shared/validation';
-import { env } from '../config/env';
-import { getRepository, getSystemStatus } from '../db/adapter';
+} from '../../src/shared/validation.js';
+import { env } from '../config/env.js';
+import { getRepository, getSystemStatus } from '../db/adapter.js';
 import {
   authenticateJwt,
   requireRoles,
   signAuthToken,
   type AuthenticatedRequest,
-} from '../middleware/auth';
-import { evidenceUpload } from '../middleware/upload';
+} from '../middleware/auth.js';
+import { evidenceUpload } from '../middleware/upload.js';
 
 export const apiRouter = Router();
 
