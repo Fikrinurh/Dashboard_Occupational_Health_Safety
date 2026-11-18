@@ -26,7 +26,7 @@ import type {
   LocationItem,
   MedicalExamination,
 } from '../../src/shared/types';
-import { createInitialSeedState, type DemoDatabaseState } from './seedData';
+import { createInitialSeedState, type DemoDatabaseState } from './seedData.js';
 import type { IncidentDetailBundle, OhsRepository, StoredUser } from './types';
 
 const DEMO_DB_PATH = path.resolve(process.cwd(), 'server/data/demo-db.json');
