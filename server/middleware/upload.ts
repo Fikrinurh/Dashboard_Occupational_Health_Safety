@@ -4,8 +4,6 @@ import multer from 'multer';
 import path from 'path';
 import { env } from '../config/env.js';
 
-fs.mkdirSync(env.uploadDir, { recursive: true });
-
 const ALLOWED_MIME_TYPES = new Set([
   'image/jpeg',
   'image/jpg',
