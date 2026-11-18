@@ -15,7 +15,9 @@ let systemStatus: SystemStatus = {
 };
 
 export async function initializeDatabaseAdapter(): Promise<OhsRepository> {
-  const isProduction = process.env.NODE_ENV === 'production';
+  const isProduction =
+  process.env.NODE_ENV === 'production' ||
+  process.env.VERCEL === '1';
   const configured = isMysqlConfigured();
 
   if (!configured) {
