@@ -4,7 +4,17 @@ import { env } from '../config/env.js';
 let pool: mysql.Pool | null = null;
 
 export function isMysqlConfigured(): boolean {
-  return Boolean(env.dbHost.trim() || env.cloudSqlConnectionName.trim());
+  const hasHost = Boolean(
+    env.dbHost.trim() || env.cloudSqlConnectionName.trim()
+  );
+
+  const hasCredentials = Boolean(
+    env.dbUser.trim() &&
+    env.dbPassword &&
+    env.dbName.trim()
+  );
+
+  return hasHost && hasCredentials;
 }
 
 export function getMysqlPool(): mysql.Pool {
