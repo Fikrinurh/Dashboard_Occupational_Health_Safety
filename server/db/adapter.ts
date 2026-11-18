@@ -1,7 +1,7 @@
 import type { SystemStatus } from '../../src/shared/types';
-import { DemoStoreRepository } from './demoStore';
-import { isMysqlConfigured, testMysqlConnection } from './mysql';
-import { MysqlRepository } from './mysqlRepository';
+import { DemoStoreRepository } from './demoStore.js';
+import { isMysqlConfigured, testMysqlConnection } from './mysql.js';
+import { MysqlRepository } from './mysqlRepository.js';
 import type { OhsRepository } from './types';
 
 let activeRepo: OhsRepository | null = null;
