@@ -8,7 +8,7 @@ import {
   classifyUricAcid,
   computeCapaEffectiveStatus,
   deriveMedicalStatus,
-} from '../../src/shared/ohsLogic';
+} from '../../src/shared/ohsLogic.js';
 import type {
   AuditLog,
   AuthUser,
